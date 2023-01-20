@@ -69,8 +69,8 @@ const showOk= () => {
     let usern;
     for(let r of radios){
         if (r.checked){
-            usern = r.value ;
-            console.log(r)
+            usern = parseInt(r.value) ;
+            break;
         }
     }
     console.log(n,usern)
@@ -81,9 +81,9 @@ const showOk= () => {
     
     document.querySelector("form").reset();
 
-    document.querySelector("#s3").innerHTML=`<img src ="./img/${n}.png">`
+    document.querySelector("#s1").innerHTML=`<img src ="./img/${n}.png">`
     document.querySelector("#s3").innerHTML=`<img src ="./img/${tag}.png">`
-    show ("block","none","block","block","none")
+    show ("block", "none", "block" , "block", "none")
 
 
 }
@@ -94,7 +94,7 @@ const showDice = () =>{
  //   const s3 = document. queryselector ("#s3")
    // s3.innerHTML= `<img src='./img/${n}.png'>`;
     console.log(n)  
-    show ("none","none","block","none","block")    
+    show ("none", "block", "none" , "none", "block")    
 }
 const show = (dspS1,dspS2,dspS3,dspBt1,dspBt2)=>{
         const s1 = document.querySelector("#s1");
